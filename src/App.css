@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
+
+:root {
+  --bg: #000;
+  --container: #111;
+  --accent: #fff;
+  --text: #fff;
+  --highlight: #222;
+  --button-hover: #333;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.container {
+  background: var(--container);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.level-button.active {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.question-box {
+  background: var(--highlight);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.level {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.question {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+
+.hint-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  border-left: 3px solid var(--accent);
+}
+
+.solution-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Increased gap for better spacing */
+  margin: 1.5rem 0;
+}
+
+.solution-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  border: 2px solid var(--accent);
+  min-width: 140px;
+  margin: 0 0.5rem; /* Added margin for extra spacing */
+}
+
+.solution-container {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.solution-container pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.next-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .buttons {
+    gap: 1rem;
+  }
+  
+  .question-box {
+    padding: 1.5rem;
+  }
+  
+  .solution-buttons {
+    flex-direction: column;
+    gap: 1rem; /* Increased gap for stacked buttons */
+    align-items: center;
+  }
+  
+  .solution-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0.25rem 0; /* Added vertical margin */
+  }
+}
