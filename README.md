@@ -1,4 +1,4 @@
-# 🎯 Coding Challenge Generator
+# 🎯 Coding Challenge Generator !!
 
 A simple tool to generate random coding challenges for practice.
 
